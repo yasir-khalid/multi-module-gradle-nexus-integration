@@ -1,0 +1,25 @@
+/*
+Everything from `allProjects` block from the source gradle.build file is being imported here
+No need to repeat the imports/implementations
+ */
+
+/*
+Everything from `allProjects` block from the source gradle.build file is being imported here
+No need to repeat the imports/implementations
+ */
+
+ext {
+    mainClassName = 'com.sportscanner.common.utils.greeting'
+}
+
+shadowJar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName
+        )
+    }
+}
+
+application {
+    mainClass = mainClassName
+}
